@@ -7,8 +7,8 @@ logger = create_logger()
 def prune_expired_tokens():
     directory = "tokens"
 
-    #file_age_limit = 2 * 60 * 60  # 2 hours in seconds
-    file_age_limit = 60 # for testing purposes
+    file_age_limit = 2 * 60 * 60  # 2 hours in seconds
+    #file_age_limit = 60 # for testing purposes
     current_time = time.time()
 
     if os.path.exists(directory):
