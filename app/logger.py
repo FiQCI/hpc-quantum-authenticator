@@ -3,6 +3,15 @@ from logging.handlers import RotatingFileHandler
 
 
 def create_logger():
+    """
+    Customizes the default logger for the application.
+
+    The logger outputs to both the console and a rotating file handler.
+    The log format includes the timestamp, logger name, log level, and message.
+
+    Returns:
+        logging.Logger: Configured logger for the application.
+    """
     logger = logging.getLogger('Quantum_logger')
     logger.setLevel(logging.DEBUG)
 
@@ -18,8 +27,8 @@ def create_logger():
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
     
-    logging.getLogger('flask').setLevel(logging.DEBUG)
-    logging.getLogger('flask').addHandler(console_handler)
-    logging.getLogger('flask').addHandler(file_handler)
+    logging.getLogger('Quantum_logger').setLevel(logging.DEBUG)
+    logging.getLogger('Quantum_logger').addHandler(console_handler)
+    logging.getLogger('Quantum_logger').addHandler(file_handler)
     
     return logger
