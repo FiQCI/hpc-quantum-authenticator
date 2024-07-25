@@ -4,7 +4,11 @@ from app.logger import create_logger
 
 
 logger = create_logger()
+
 def prune_expired_tokens():
+    """
+    Removes all expired tokens
+    """
     directory = "tokens"
 
     file_age_limit = 2 * 60 * 60  # 2 hours in seconds
