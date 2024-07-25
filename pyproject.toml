@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "hpc-quantum-authenticator"
+version = "0.1.0"
+description = ""
+authors = ["Modupe <falodunmodupeola@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Flask-APScheduler = "^1.13.1"
+Flask = "^3.0.3"
+requests= "^2.32.3"
+python-dotenv= "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.1"
+coverage = "^7.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
